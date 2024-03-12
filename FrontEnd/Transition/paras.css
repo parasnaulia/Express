@@ -1,0 +1,134 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+      font-size: 1.5rem;
+      
+}
+.container
+{
+      /* background: #000; */
+      display: flex;
+      background: #252020;
+      justify-content: space-around;
+      align-items: center;
+      /* width: 2rem; */
+      height: 3rem;
+}
+.items
+{
+      border: 2px solid rgb(212, 71, 130);
+      /* height: 3rem; */
+      /* width: 5rem; */
+      /* margin: auto; */
+      height: auto;
+      width: auto;
+      /* border-radius: 1rem; */
+      cursor: pointer;
+      /* transition: all ; */
+      /* transition-property: all;
+      transition-duration: 1s;
+      transition-timing-function:ease-in-out ; */
+      transition: all 0.5s ease-in 0s;
+
+      
+
+}
+.items:hover{
+      background-color: rgb(127, 187, 30);
+
+}
+.inner
+{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap:1rem;
+      margin-top: 3rem;
+      
+
+      
+}
+.c1
+{
+      color: #252020;
+      border: 2px solid black;
+      /* background-color: aqua; */
+      transition: all 0.4s ease-in-out 0s;
+      box-shadow: 12px 10px 10px 10px;
+}
+.c2
+{
+color: #252020;
+border: 2px solid black;
+transition: all 0.4s ease-in-out 0s;
+}
+.c1:hover{
+      transform: translateY(-2rem);
+      background-color: blueviolet;
+      transform: scale(1.2);
+      /* transform: rotate(45deg); */
+      transform: translatey(-2rem);
+}
+
+.c2:hover
+{
+      transform: translatey(-2rem);
+      /* background-color: burlywood;
+      background-image: linear-gradient(red, yellow, green); */
+      background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+      background-image: radial-gradient(red, green, blue);
+      background-image: radial-gradient(red 5%, green 15%, blue 60%);
+
+}
+.ani
+{
+      border: 2px solid black;
+      margin-top: 1rem;
+      /* position: relative */
+}
+.ai
+{
+      color: rgb(221, 209, 209);
+      border: 2px solid black;
+      height: 100%;
+      width: 20%;
+      /* position:absolute; */
+      animation-name: move;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: relative;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* animation-fill-mode:none; */
+      /* animation-direction:reverse; */
+      animation:move 6s linear infinite ;
+      
+
+}
+@keyframes move {
+      0%   {background-color:red; left:0vw; }
+  25%  {background-color:rgb(198, 31, 31); left:25vw; }
+  50%  {background-color:blue; left:50vw; }
+  75%  {background-color:rgb(216, 59, 24); left:75vw;}
+  100% {background-color:red; left:100vw;}
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+ 
+      
+}
+.item2::before{
+      content: "";
+      border-bottom: 2px solid black;
+      position: relative;
+      top:2rem;
+     
+}
+
+/* Grid flex-box position box diagram float animations transistion transform pseduo class and element   */
+p{
+      color: black;
+      text-align: center;
+      /* text-shadow: 6px 6px  2px; */
+
+}

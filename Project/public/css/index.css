@@ -1,0 +1,130 @@
+body{
+      font-size: 2rem;
+}
+.inner
+{
+      display: flex;
+      flex-direction: row;
+      border: 2px solid black;
+      background-color: crimson;
+      
+}
+.inner div{
+      margin: 19px 30px;
+      border: 2px solid black;
+}
+a{
+      text-decoration: none;
+}
+.main
+{
+      width: 100%;
+}
+body 
+{
+      margin: 0;
+      padding: 0;
+}
+.inner1
+{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 70px;
+     
+     
+}
+.navi
+{
+      margin: 0px 20px;
+}
+.wh
+{
+      color: crimson;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      
+}
+.name
+{
+      color: crimson;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.slider
+{
+
+}
+.about
+{
+      justify-content: center;
+      text-align: center;
+}
+body{
+      height: 100vh;
+}
+.foot
+{
+      background-color:rebeccapurple ;
+      color:antiquewhite;
+      justify-content: center;
+      text-align: center;
+      margin-top:280px;
+
+}
+.inner-div
+{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 70px 0px;
+}
+.temp
+{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 20px 20px;
+}
+.last
+{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      
+      
+}
+.last-inner
+{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: 2px solid black;
+      margin-top: 20px;
+      background-color: rgb(131, 202, 216);
+}
+ 
+.box
+{
+      width: 50%;
+      /* box-sizing: border-box; */
+   
+      padding: 20px;
+      
+}
+#btn
+{
+      background-color: cadetblue;
+      padding: 10px 10px;
+      font-family: cursive;
+      font-weight: bold;
+      
+}
+#city
+{
+      background-color: cornflowerblue;
+}

@@ -1,0 +1,138 @@
+To se The databases we use => show dbs;
+Note: if the  database is not present then it gets automatically created. if database is there
+then you enter into that database.
+To se the collections we use=>show collections
+Note: if table does not contain any data then in that particular senario database will also 
+been not show to us whwn we a write show dbs
+
+
+Now After creating a table we have to insert the data in my collections
+Analogy are 
+Table-> collections
+entries un whole row(row)->document
+coulmn->fields.
+// What is Difference between mysql and mongodb
+in mysql our schema is defined and it also supports acid properties due to which we can use this 
+in transistion database
+but mongodb is more flexible due to which we can add dynamic data without change in my schema
+
+Insert Data in Database of mongodb
+db.collectionName.insertOne({});
+db.collectionName.insertMany([{},{}]);
+
+To find the Data in Database we use 
+db.collectionName.find(query,projection);
+ mongo database alaways run on localhost on  background either we have connected to shell or not so the main work of shell is to provide a connection in database server to interact with database
+
+  db.paras.find({name:"Paras"},{age:0,_id:0,gender:0});
+db.paras.findOne({name:"Paras"});
+db.paras.find({name:"Paras"}).limit(1).skip(1);
+
+Now To update any thing in database we use following commands
+db.collectionName.updateOne(filter,,update);
+db.collectionName.updateMany(filter,update);
+
+
+db.paras.updateMany(
+  { 
+    $and: [
+      { name: "Paras" },
+      { age: 99 },
+      { $or: [ { Gender: "Female" } ] }
+    ]
+  },
+  { $set: { name: "Paras Bhai", Gender: "Male" } }
+);
+
+This is a way we can apply more than one query
+
+
+To delete The data in database we use
+db.collectionName.deleteOne(condition);
+db.collectionName.deleteMany(condition);
+
+Mongoose is a library of node js with the help of which we can intereact with db it is object modeling 
+tool means we can connect and perform various operation in mongodb by creating a object and with
+the help of that object we can perfom crud operation
+this object is created using a model which takes two agumnets 1 is collection name and second
+is schema (which defines the struture of collection).
+
+Note :whenever You are using await then its below code also gets suspended and that overall function
+gets suspended
+
+
+
+
+
+RestFul api
+
+
+in first step client makes an req to server to get html css and js file in this case there is no use of restful api but in second step when browser sees that in html document there is dynamic data is there which has to fetched from database then in second step the req goes to restful api and  then restful api sends a req to server for futher processing and server respond and that respond is sent to client with restful api 
+
+
+
+Client Requests HTML, CSS, and JS (Initial Page Load):
+
+When a user initially accesses a web page, the client (browser) sends a request to the server for the HTML, CSS, and JS files.
+The server responds by sending the requested HTML, CSS, and JS files to the client.
+Browser Parses HTML and Requests Additional Data (Dynamic Data):
+
+The browser parses the HTML and may encounter elements that require dynamic data, such as placeholders or areas for content from a database.
+At this point, the client (browser) can make additional requests for data to populate these dynamic elements.
+Client Makes Request to RESTful API for Data:
+
+Using JavaScript, the client makes a request to a specific endpoint of a RESTful API to fetch the required data.
+This request is independent of the initial request for HTML, CSS, and JS files.
+RESTful API Processes Request and Communicates with Server:
+
+The RESTful API, upon receiving the request, processes it and may interact with the server or a database to fetch the required data.
+The API orchestrates the necessary actions on the server to retrieve or manipulate the data.
+Server Responds to RESTful API:
+
+The server responds to the RESTful API with the requested data.
+RESTful API Sends Data to Client:
+
+The RESTful API sends the retrieved data back to the client in a structured format, often JSON.
+Client Updates HTML with Dynamic Data:
+
+The client-side JavaScript processes the data received from the RESTful API and dynamically updates the HTML page, replacing placeholders with actual data.
+This sequence of steps illustrates how, after the initial page load, dynamic data can be fetched from a server via a RESTful API to update and enhance the user interface. The use of a RESTful API allows for a standardized way to request and exchange data between the client and the server.
+
+
+Restful API is Basically a interface between client and server which helps in interaction between client and server with certain rules their connection should follow http verb and client get acess to the server database or resource  with a link and we can perform crud opertion using that same link.
+
+
+
+
+
+
+
+
+Yes, your understanding is quite accurate! Let me summarize the process you've described:
+
+User Authentication:
+
+During login, the server validates the user's credentials.
+Upon successful authentication, the server generates a JWT (or another form of token) containing user information.
+This token is sent to the client, and the client typically stores it securely, often as a cookie or in local storage.
+Token Transmission:
+
+For subsequent requests, the client includes the token (e.g., JWT) in the request headers.
+This is commonly achieved by sending the token in an HTTP header, such as the Authorization header.
+Server-Side Verification:
+
+Upon receiving a request, the server verifies the token's signature using a secret key.
+If the signature is valid, the server decodes the token to extract user information (e.g., user ID) and uses it for authentication.
+If the token is valid, the server treats the user as authenticated.
+Session Management:
+
+The server may store additional session-related data in a database, associating it with the user ID or session ID.
+The token itself may contain an expiration time (in the payload), and the server may enforce this expiration to automatically log out users after a certain period of inactivity.
+If the user logs out explicitly, the server can invalidate the token or clear the associated session data.
+Access Control:
+
+Based on the authentication status and user information obtained from the token, the server determines whether the user has the necessary permissions to access a particular resource or perform a specific action.
+Logout:
+
+If the user logs out, the client may destroy the stored token, and the server may invalidate the token or clear associated session data.
+This approach provides a secure and scalable way to handle user authentication and authorization. The use of tokens allows for stateless authentication, while the server-side session management (using a database, for example) provides additional control and flexibility in handling user sessions.

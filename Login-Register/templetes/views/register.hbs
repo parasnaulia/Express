@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="/css/index.css"/>
+</head>
+<body>
+      {{>Nav}}
+      <div class="container">
+            <div>
+            <h1>
+                  Register Here
+
+            </h1>
+            </div>
+            <div class="inner">
+                  <form action="/register" method="POST">
+                  <label for="name1"> Enter Your Name  </label>
+                  <input placeholder="Enter Your Name" class="pp" id="name1" name="name"/><br><br>
+                  <label for="age">Enter Your age    </label>
+                  <input class="pp" placeholder="Enter Your Name" id="age" name="age"/><br><br>
+                  <label for="Email">Enter Your Email  </label>
+                  <input class="pp" id="Email" name="Email" placeholder="Enter Your Email"/><br><br>
+                  <label for="add">Enter your Address</label>
+                  <input class="pp" id="add" placeholder="Enter Your Address" name="add"/><br><br>
+                  {{!-- <label for="Male">Gender</label>
+                  <input  id="Male"  name="Gender" type="Radio">
+                  <label for="Male">Male</label>
+                  <input type="Radio" id="female" name="Gender"/>
+                  <label for="female">Female</label><br><br> --}}
+
+                  <label for="male">Gender:</label>
+<input id="male" name="gender" type="radio" value="male">
+<label for="male">Male</label>
+
+<input id="female" name="gender" type="radio" value="female">
+<label for="female">Female</label>
+
+<br><br>
+
+
+                  
+                   <label for="Password">Enter Your Password  </label>
+                  <input class="pp" id="Password" name="Password" placeholder="Password"/><br><br>
+                   <label for="CPassword">Confirm PAssword  </label>
+                  <input class="pp" id="CPassword" name="CPassword" placeholder="Confirm Password"/><br><br>
+                  <div>{{err}}</div>
+                  <button type="submit" class="btn">Submit</button>
+
+
+                  </form>
+            </div>
+      </div>
+      
+</body>
+</html>

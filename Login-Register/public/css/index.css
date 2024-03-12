@@ -1,0 +1,81 @@
+
+.container
+{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 30px;
+      background-image: url('/images/bg.jpg');
+      background-position: center;
+      background-repeat:no-repeat ;
+      background-size: cover;
+      
+
+      
+
+}
+.inner
+{
+      border: 2px solid black;
+      padding: 10px 10px;
+}
+.pp{
+      height: 40px;
+      width: 300px;
+}
+.btn
+{
+      background-color: rgb(199, 233, 87);
+      font-size: larger;
+}
+.cont
+{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 50px;
+      background-color: chocolate;
+      background-image: url("/images/bgl.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+.in
+{
+      background-color: darkgray;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 2rem;
+
+
+}
+.home
+{
+      height: 100vh;
+      background-image: url("/images/home.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+.obc
+{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      padding: auto;
+}
+.obc div{
+      margin: 30px 0px;
+}
+.cp
+{
+      margin-bottom: 30px;
+}
+a{
+      text-decoration: none;
+}

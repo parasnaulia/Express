@@ -1,0 +1,16 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Mongoose.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paras Naulia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0",
+    "validator": "^13.11.0"
+  }
+}
